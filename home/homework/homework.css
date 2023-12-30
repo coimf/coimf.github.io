@@ -1,0 +1,177 @@
+h1 {color: rgb(255, 255, 255);
+font-size: xx-large; 
+font-family: Georgia, 'Times New Roman', Times, serif; 
+text-align: center;
+padding-left: 20%;}
+h2 {font-size: medium;
+color: rgb(204, 204, 204);
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: center;
+padding-left: 20%;}
+#qin_shi_huang_img {display: block;
+    margin-left: 45%;
+    width: 23%;
+    margin-top: -27%;}
+#beinan_face_img {display: block;
+    margin-left: 10px;
+    width:15%}
+#beinan_ci4k {margin-left: 0.5%;
+color: rgb(230,230,230);
+font-family: Georgia, 'Times New Roman', Times, serif;}
+body {background-color: #101010;}
+#essay {color: rgb(185, 185, 185);
+font-size: larger; 
+font-family: 'Times New Roman', Times, serif;
+padding-left: 20%; 
+margin-top: 0%;
+}
+#pagesList {color: white;
+text-align: left;
+padding-left: 23%;
+font-size: large;}
+#contact {color: rgb(178, 178, 178);
+font-size: auto;
+width: 20%;
+margin-left: 10px;
+margin-top: 75px;
+}
+#contactList {
+margin-left: -11px;
+}
+#main {margin-top: -4%;
+    position: relative;
+    min-height: 100vh;}
+#content-wrap {
+    padding-bottom: 164px;}
+#author {font-size: small;
+top: 100px;
+position: fixed;
+margin: 50px;
+margin-left: 38%;
+}
+#essay_title {padding: 5px;
+text-decoration: none;
+top: 65px;
+position: fixed;
+margin-left: -320px;
+}
+#logo {font-size: xx-large;
+color: white;
+padding: 5px 5px;
+text-decoration: none;
+font-family: Georgia, 'Times New Roman', Times, serif;}
+ul {color: rgb(134, 134, 134);}
+#timedate {
+font-family: 'Courier New', Courier, monospace, Arial, sans-serif;
+font-size: large;
+margin-top: -1.5%;
+width: 50%;
+margin-left: 10px ;
+color:#fff;
+}
+.cursor {
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: fixed;
+    transition-duration: 0ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%,-50%);
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    z-index: 2;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    pointer-events: none;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+.footer_wave {
+    margin-top: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.footer_wave svg {
+    position: relative;
+    display: block;
+    width: calc(135% + 1.3px);
+    height: 164px;
+    transform: rotateY(180deg);
+}
+
+.footer_wave .shape-fill {
+    fill: #008080;
+}
+a:link {color: rgb(224, 224, 224);
+font-family: Georgia, 'Times New Roman', Times, serif;}
+a:hover {color: #ffd75f;
+background-color: rgb(164, 92, 231);
+}
+a:visited {color: rgb(224, 224, 224);}
+a:active {color: aqua;}
+/*Color palette: 
+1. #581845 (DARK PURPLE)
+2. #900C3F (DARK MAGENTA)
+3. #C70039 (PINK RED)
+4. #FF5733 (ORANGE)
+5. #FFC30F (YOLK YELLOW)
+*/
+
+
+
+
+
+
