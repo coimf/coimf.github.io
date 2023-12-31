@@ -21,35 +21,35 @@ section {
     min-height: 100vh;
 }
 .hidden {
-    scale: 3;
+    scale: 1.2;
     opacity: 0;
     filter: contrast(0) blur(30px);
-    transform: translate(0px,44px) rotate(0deg);
-    transition: all 0.8s ease-in;
+    transform: translate(0px,44px);
+    transition: all 0.8s ease-in-out;
 }
 .shown {
     scale: 0.8;
     opacity: 1;
     filter: blur(0) contrast(1.2);
-    transform: translate(0px,40px) rotate(0deg);
+    transform: translate(0px,40px);
 }
 .hidden1 {
     opacity: 0;
-    transform: translate(0px,400px) rotate(0deg);
+    transform: translate(0px,400px);
     transition: all 1s;
 }
 .shown1 {
     text-shadow: 0px 0px 24px #ffffff;
     opacity: 1;
     filter: blur(0);
-    transform: translate(0px,0px) rotate(0deg);
+    transform: translate(0px,0px);
 }
 .hidden2 {
     opacity: 0;
     filter: blur(7px);
     transform: translate(310px,-300px);
     animation-delay: 0.4s;
-    transition: all 1s;
+    transition: all 0.6s ease-in-out;
 }
 .shown2 {
     opacity: 1;
@@ -57,23 +57,23 @@ section {
     transform: translate(0px,0px);
 }
 .hidden3 {
-    scale: 1.8;
+    scale: 1.1;
     opacity: 0;
     filter: blur(30px);
-    transform: translate(0px,200px) rotate(0deg);
+    transform: translate(50px,0);
     transition: all 0.7s;
 }
 .shown3 {
     scale: 1;
     opacity: 1;
     filter: blur(0);
-    transform: translate(0px,0px) rotate(0deg);
+    transform: translate(0px,0px);
     text-shadow: 0px 0px 24px #ffffff;
 }
 
 .navbar-el {
     width: 100vw;
-    height: 6vh;
+    height: 7.5vh;
     position: fixed;
     background-color: #000000;
     z-index: 1;
@@ -89,7 +89,7 @@ section {
     border: none;
 }
 .navbar-item {
-    height: 100%;
+    height: 7.5vh;
     padding: 20px;
     background-color: #000000;
     border: none;
