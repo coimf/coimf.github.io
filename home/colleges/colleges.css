@@ -119,7 +119,7 @@ fieldset {
 
 .navbar-el {
     width: 100vw;
-    height: 6vh;
+    height: 7.5vh;
     position: fixed;
     background-color: #000000;
     z-index: 1;
@@ -135,7 +135,7 @@ fieldset {
     border: none;
 }
 .navbar-item {
-    height: 100%;
+    height: 7.5vh;
     padding: 20px;
     background-color: #000000;
     border: none;
