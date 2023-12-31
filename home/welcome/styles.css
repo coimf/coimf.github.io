@@ -204,7 +204,7 @@ letter 6 is 321.2958679199219*/
 
 .navbar-el {
     width: 100vw;
-    height: 6vh;
+    height: 7.5vh;
     position: fixed;
     background-color: #000000;
     z-index: 1;
@@ -220,7 +220,7 @@ letter 6 is 321.2958679199219*/
     border: none;
 }
 .navbar-item {
-    height: 100%;
+    height: 7.5vh;
     padding: 20px;
     background-color: #000000;
     border: none;
@@ -240,6 +240,7 @@ a.navbar-item-link {
 }
 .logo {
     margin: auto;
+    color: white;
 }
 .arrow {
     border: solid rgb(255, 255, 255);
