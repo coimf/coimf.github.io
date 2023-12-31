@@ -1,5 +1,4 @@
 # coimf.github.io
-## By Jerry Li
-Email: mrlijerry@gmail.com
-Discord: fiovwndjol
-Replit: JerryLi53
+## By fiovwndjol
+Email: fiovwndjol@gmail.com
+Discord: fiovwndjol (#0845)
