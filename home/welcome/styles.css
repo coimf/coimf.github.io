@@ -215,20 +215,21 @@ letter 6 is 321.2958679199219*/
     padding: 0;
     margin: 0;
     align-items: center;
-    display: inline-flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(5, 9vw);
+    place-items: center;
+    justify-content: center;
     border: none;
 }
 .navbar-item {
     height: 7.5vh;
-    padding: 20px;
+    width: 9vw;
     background-color: #000000;
     border: none;
 }
+
 a.navbar-item-link {
-    font-size: 17px;
-    display: flex;
-    flex-direction: row;
+    font-size: 1.1vw;
     text-align: center;
     text-decoration: none;
     color: rgb(220, 220, 220);
@@ -258,7 +259,7 @@ a.navbar-item-link {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding-left: 24vw; padding-right: 24vw;
     place-items: center;
-    font-size: 50px;
+    font-size: 3.5vw;
 }
 
 /*Animation 1*/
@@ -332,4 +333,48 @@ transform: rotate(90deg) translate(0px,-400px);
 
 ::-webkit-scrollbar {
     display: none;
+}
+@media only screen and (max-width: 600px) {
+    #hello {
+        scale: 0.3;
+    }
+    .grid {
+        font-size: 4vw;
+    }
+    .navbar-el {
+        width: 100vw;
+        height: 7.5vh;
+        position: fixed;
+        background-color: #000000;
+        z-index: 50;
+        text-align: center;
+    }
+    .navbar {
+        width: 100vw;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(5, 20vw);
+        place-items: center;
+        justify-content: center;
+        border: none;
+    }
+    .navbar-item {
+        height: 7.5vh;
+        min-width: 20vw;
+        background-color: #000000;
+        border: none;
+    }
+    a.navbar-item-link {
+        font-size: 2.3vw;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(220, 220, 220);
+    }
+    .navbar-item:hover {
+        text-shadow: 0px 3px 20px #ffffff;
+        cursor: none;
+    }
 }
