@@ -20,6 +20,10 @@
         body {
             margin: 0;
             padding: 0;
+        }
+        body > * {
+            margin: 0;
+            padding: 0;
             background-color: #000000;
             color: #ffffff;
             font-family: "San Francisco";
@@ -31,12 +35,18 @@
             align-content: center;
             min-height: 100vh;
         }
+        #alien-image {
+            width: 140%
+        }
         #email-link, #discord-link {
             color: white;
         }
         #email-link:hover, #discord-link:hover {
             text-shadow: 0px 0px 12px white;
             cursor: none;
+        }
+        #title {
+            text-align: center; font-size: 8.85vw; text-shadow: 0px 1px 24px #ffffff;
         }
         .cursor {
             z-index: 2;
@@ -154,7 +164,7 @@
                 
         .navbar-el {
             width: 100vw;
-            height: 6vh;
+            height: 7.5vh;
             position: fixed;
             background-color: #000000;
             z-index: 1;
@@ -165,20 +175,21 @@
             padding: 0;
             margin: 0;
             align-items: center;
-            display: inline-flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: repeat(5, 9vw);
+            place-items: center;
+            justify-content: center;
             border: none;
         }
         .navbar-item {
-            height: 100%;
-            padding: 20px;
+            height: 7.5vh;
+            width: 9vw;
             background-color: #000000;
             border: none;
         }
+
         a.navbar-item-link {
-            font-size: 17px;
-            display: flex;
-            flex-direction: row;
+            font-size: 1.1vw;
             text-align: center;
             text-decoration: none;
             color: rgb(220, 220, 220);
@@ -191,6 +202,74 @@
         .logo {
             margin: auto;
             color: white;
+        }
+        #wrap {
+            list-style-type: none; display: grid; grid-template-columns: 480px 300px;
+        }
+        #title-sub {
+            font-size: 7vw; margin: 0;
+        }
+        #about-text {
+            font-size: 2vw; list-style-type: none; margin: 0; padding: 0;
+        }
+        @media only screen and (max-width: 600px) {
+            #alien-image {
+                width: 80vw;
+                padding: 0;
+                margin: 0;
+            }
+            #about-text {
+                font-size: 4vw;
+                text-align: center;
+            }
+            #title-sub {
+                font-size: 12vw;
+                text-align: center;
+            }
+            #wrap {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+            #title {
+                font-size: 14vw;
+            }
+            .navbar-el {
+                width: 100vw;
+                height: 7.5vh;
+                position: fixed;
+                background-color: #000000;
+                z-index: 50;
+                text-align: center;
+            }
+            .navbar {
+                width: 100vw;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                display: grid;
+                grid-template-columns: repeat(5, 20vw);
+                place-items: center;
+                justify-content: center;
+                border: none;
+            }
+            .navbar-item {
+                height: 7.5vh;
+                min-width: 20vw;
+                background-color: #000000;
+                border: none;
+            }
+            a.navbar-item-link {
+                font-size: 2.3vw;
+                text-align: center;
+                text-decoration: none;
+                color: rgb(220, 220, 220);
+            }
+            .navbar-item:hover {
+                text-shadow: 0px 3px 20px #ffffff;
+                cursor: none;
+            }
         }
     </style>
 </head>
@@ -227,15 +306,15 @@
     </nav>
     <div id="content-wrapper">
     <section>
-    <h1 class="hidden" style="text-align: center; font-size: 170px; text-shadow: 0px 1px 24px #ffffff;">
+    <h1 class="hidden" id="title">
         About Me
     </h1>
     </section>
     <section>
-        <ul class="hidden1" style="list-style-type: none; display: grid; grid-template-columns: 480px 300px;">
+        <ul class="hidden1" id="wrap">
             <li>
-                <h3 style="font-size: 7vw; margin: 0;">About</h3>
-                <ul style="font-size: 2vw; list-style-type: none; margin: 0; padding: 0;">
+                <h3 id="title-sub">About</h3>
+                <ul id="about-text">
                     <li>
                         <p>I'm not an alien because I drink water. </p>
                         <p>I don't suck at math. <br>Or maybe I do.</p>
@@ -258,7 +337,7 @@
                 </ul>
             </li>
             <li>
-                <img class="hidden2" src="/pictures/alien.png" style="width: 140%">
+                <img class="hidden2" src="/pictures/alien.png" id="alien-image">
             </li>
         </ul>
     </section>
