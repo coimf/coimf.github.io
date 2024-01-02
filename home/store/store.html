@@ -43,33 +43,45 @@
     <div class="wrapper">
       <header>
         <img src="/pictures/store-background.png" class="background">
-        <h1 class="hidden foreground" style="background-image: none; text-align: center; font-size: 170px; text-shadow: 0px 1px 24px #ffffff;">
+        <h1 class="hidden foreground" id="store-title">
           Store
         </h1>
-        <p class="background" style="bottom: -166%; text-align: center; color: rgb(220, 220, 220); font-size: 1.8vw; text-shadow: 0px 0px 14px white;">Scroll down to view products<br>
+        <p class="background" id="scroll-tip">Scroll down to view products<br>
       </p>
       </header>
-      <section></section>
-      <section id="product-grid foreground">
-        <h1 style="font-size: 50px; margin-bottom: 14vh; text-shadow: 0px 0px 2.5vh white;">
+      <section id="filler-section"></section>
+      <section>
+        <h1 style="font-size: 6vw; margin-bottom: 14vh; text-shadow: 0px 0px 2.5vh white; text-align: center;">
           Choose a product
         </h1>
         <ul class="product-grid">
-          <button class="product-frame" id="gaming-water-btn" onclick="window.location.href='/home/store/product/gaming-water.html'" style="background: url(/pictures/product-water.png); background-size: 25vw 25vw;">
-            <a class="product-name">
-              Gaming Water
-            </a>
-          </button>
-          <button class="product-frame" id="gaming-chair-btn" onclick="window.location.href='/home/store/product/gaming-chair.html'" style="background: url(/pictures/product-chair.png); background-size: 25vw 25vw;">
-            <a class="product-name">
-              Gaming Chair
-            </a>
-          </button>
-          <button class="product-frame" id="gaming-heater-btn" onclick="window.location.href='/home/store/product/gaming-heater.html'" style="background: url(/pictures/product-heater.png); background-size: 25vw 25vw;">
-            <a class="product-name">
-              Gaming Heater
-            </a>
-          </button>
+          <div class="pop-wrapper" onclick="window.location.href='/home/store/product/gaming-water.html'">
+            <!-- <button class="product-frame hidden1" id="gaming-water-btn" onclick="window.location.href='/home/store/product/gaming-water.html'"> -->
+              <img src="/pictures/product-water.png" class="background-image">
+              <img src="/pictures/gaming-water-hover-popup.png" class="pop-image">
+              <a class="product-name">
+                Gaming Water
+              </a>
+            <!-- </button> -->
+          </div>
+          <div class="pop-wrapper" onclick="window.location.href='/home/store/product/gaming-chair.html'">
+            <!-- <button class="product-frame hidden2" id="gaming-chair-btn" onclick="window.location.href='/home/store/product/gaming-chair.html'"> -->
+              <img src="/pictures/product-chair.png" class="background-image">
+              <img src="/pictures/gaming-toilet-hover-popup.png" class="pop-image">
+              <a class="product-name">
+                Gaming Chair
+              </a>
+            <!-- </button> -->
+          </div>
+          <div class="pop-wrapper" onclick="window.location.href='/home/store/product/gaming-heater.html'">
+            <!-- <button class="product-frame hidden3" id="gaming-heater-btn" onclick="window.location.href='/home/store/product/gaming-heater.html'"> -->
+              <img src="/pictures/product-heater.png" class="background-image">
+              <img src="/pictures/gaming-heater-hover-popup.png" class="pop-image">
+              <a class="product-name">
+                Gaming Heater
+              </a>
+            <!-- </button> -->
+          </div>
         </ul>
       </section>
       <div id="back">
