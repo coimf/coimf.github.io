@@ -491,6 +491,12 @@ a.navbar-item-link {
         cursor: none;
         scale: 2;
     }
+    .shown {
+        filter: brightness(1);
+        scale: 0.8;
+        opacity: 1;
+        transform: translate(0px,0px);
+    }
     .background {
         filter: opacity(0.75);
         object-fit: cover;
