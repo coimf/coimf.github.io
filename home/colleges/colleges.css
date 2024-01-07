@@ -7,10 +7,20 @@
     overflow-x: clip;
     overflow-y: visible;
 }
-@font-face {
+/* @font-face {
     font-family: "San Francisco";
     font-weight: 400;
     src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+} */
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+h1, h2, h3, p, b {
+    font-family: var(--system-ui);
+    font-weight: 550;
+}
+b {
+    font-weight: normal;
 }
 body {
     -ms-overflow-style: none;  
@@ -292,16 +302,16 @@ a.navbar-item-link {
     border: 1px solid red;
 }
 #content-title {
-    color: #ffffff;text-align: center; font-size: 8.85px; text-shadow: 0px 1px 24px #ffffff;
+    color: #ffffff;text-align: center; font-size: 8.85vw; text-shadow: 0px 1px 24px #ffffff;
 }
 #mit-desc {
     list-style-type: none; display: grid; grid-template-columns: 44vw 300px;
 }
 #stanford-desc {
-    list-style-type: none; display: grid; grid-template-columns: 30vw 300px;
+    list-style-type: none; display: grid; grid-template-columns: 44vw 300px;
 }
 #cal-desc {
-    list-style-type: none; display: grid; grid-template-columns: 30vw 300px;
+    list-style-type: none; display: grid; grid-template-columns: 44vw 300px;
 }
 #college-title {
     font-size: 4vw; margin: 0;
