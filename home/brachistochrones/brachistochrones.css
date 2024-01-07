@@ -84,20 +84,21 @@ section {
     padding: 0;
     margin: 0;
     align-items: center;
-    display: inline-flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(5, 9vw);
+    place-items: center;
+    justify-content: center;
     border: none;
 }
 .navbar-item {
     height: 7.5vh;
-    padding: 20px;
+    width: 9vw;
     background-color: #000000;
     border: none;
 }
+
 a.navbar-item-link {
-    font-size: 17px;
-    display: flex;
-    flex-direction: row;
+    font-size: 1.1vw;
     text-align: center;
     text-decoration: none;
     color: rgb(220, 220, 220);
