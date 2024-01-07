@@ -1,10 +1,20 @@
 ::-webkit-scrollbar {
     display: none;
 }
-@font-face {
+/* @font-face {
     font-family: "San Francisco";
     font-weight: 400;
     src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+} */
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+h1, h2, h3, p, b {
+    font-family: var(--system-ui);
+    font-weight: 550;
+}
+b {
+    font-weight: normal;
 }
 #back-button {
     cursor: none;
