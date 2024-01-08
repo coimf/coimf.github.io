@@ -9,6 +9,9 @@
 :root {
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+html {
+    scroll-behavior: smooth;
+}
 h1, h2, h3, p, b {
     font-family: var(--system-ui);
     font-weight: 550;
