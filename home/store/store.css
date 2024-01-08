@@ -121,29 +121,6 @@ section {
     object-fit: cover;
     transform-style: preserve-3d;
 }
-.pop-image {
-    z-index: 520;
-    margin-top: -120%;
-    scale: 0.7;
-    width: 25vw;
-    opacity: 0;
-    transition: all 0.7s;
-}
-.product-name {
-    font-family: var(--system-ui);
-    top: -370%;
-    z-index: 521;
-    width: 25vw;
-    text-align: center;
-    position: relative;
-    bottom: 25%;
-    font-size: 2.2vw;
-    letter-spacing: -1px;
-    color: white;
-    text-shadow: 0px 0px 8px rgb(255, 255, 255);
-    rotate: x 0deg;
-    transition: all 0.8s;
-}
 .pop-wrapper::before {
     content: "";
     position: absolute;
@@ -199,18 +176,6 @@ section {
     place-items: center;
     perspective: 900px;
 }
-.product-grid {
-    margin-bottom: 8%;
-    gap: 5vw;
-    padding: 0;
-    pointer-events: none;
-    background: none;
-    display: grid;
-    place-items: center;
-    align-content: center;
-    grid-template-columns: repeat(3,25vw);
-    perspective: 900px;
-}
 .pop-wrapper-1 {
     background: none;
     pointer-events: all;
@@ -260,15 +225,6 @@ section {
 .pop-wrapper-1:nth-child(3):hover::after {
     translate: 0 20vh;
     width: 100%;
-}
-.background-image {
-    z-index: 2;
-    border-radius: 2vh;
-    width: 25vw;
-    height: 100%;
-    z-index: 10;
-    object-fit: cover;
-    transform-style: preserve-3d;
 }
 .pop-image {
     z-index: 520;
