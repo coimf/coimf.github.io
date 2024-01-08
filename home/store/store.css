@@ -9,6 +9,9 @@
 :root {
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+html {
+    scroll-behavior: smooth;
+}
 h1, h2, h3, p, b {
     font-family: var(--system-ui);
     font-weight: 550;
@@ -38,9 +41,6 @@ section {
     overflow-x: clip;
     perspective: 10px;
 }
-#product-grid {
-    transform-style: preserve-3d;
-}
 #product-water-img {
     width: 19vw;
 }
@@ -51,6 +51,7 @@ section {
     perspective: 900px;
 }
 .product-grid {
+    margin-bottom: 8%;
     gap: 5vw;
     padding: 0;
     pointer-events: none;
@@ -193,7 +194,155 @@ section {
     rotate: x 58deg;
     transition: all 0.4s;
 }
-
+.pop-wrapper-1 {
+    display: grid;
+    place-items: center;
+    perspective: 900px;
+}
+.product-grid {
+    margin-bottom: 8%;
+    gap: 5vw;
+    padding: 0;
+    pointer-events: none;
+    background: none;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    grid-template-columns: repeat(3,25vw);
+    perspective: 900px;
+}
+.pop-wrapper-1 {
+    background: none;
+    pointer-events: all;
+    cursor: none;
+    width: 25vw;
+    height: 25vw;
+    padding: 0;
+    margin: 0;
+    border-radius: 2vh;
+    transition: all 700ms ease;
+}
+.pop-wrapper-1:hover {
+    cursor: none;
+    box-shadow: 0px 0px 4vw orange;
+    border: 0.3vh solid darkorange;
+    rotate: x 25deg;
+    perspective-origin: 150%;
+    .product-name {
+        transform: translateY(-1vh);
+        scale: 1 1.2;
+        rotate: x -20deg;
+        font-size: 2.8vw;
+    }
+    .pop-image {
+        rotate: x -25deg;
+        transform: translateY(-24%);
+        scale: 1 1.17;
+        opacity: 1;
+    }
+}
+.pop-wrapper-1:nth-child(2):hover {
+    cursor: none;
+    box-shadow: 0px 0px 4vw gold;
+    border: 0.3vh solid gold;
+    rotate: x 25deg;
+    perspective-origin: center;
+}
+.pop-wrapper-1:nth-child(3):hover {
+    cursor: none;
+    box-shadow: 0px 0px 4vw maroon;
+    border: 0.3vh solid maroon;
+    rotate: x 25deg;
+    perspective-origin: -60%;
+}
+.pop-wrapper-1:hover::after,
+.pop-wrapper-1:nth-child(2):hover::after,
+.pop-wrapper-1:nth-child(3):hover::after {
+    translate: 0 20vh;
+    width: 100%;
+}
+.background-image {
+    z-index: 2;
+    border-radius: 2vh;
+    width: 25vw;
+    height: 100%;
+    z-index: 10;
+    object-fit: cover;
+    transform-style: preserve-3d;
+}
+.pop-image {
+    z-index: 520;
+    margin-top: -120%;
+    scale: 0.7;
+    width: 25vw;
+    opacity: 0;
+    transition: all 0.7s;
+}
+.product-name {
+    font-family: var(--system-ui);
+    top: -370%;
+    z-index: 521;
+    width: 25vw;
+    text-align: center;
+    position: relative;
+    bottom: 25%;
+    font-size: 2.2vw;
+    letter-spacing: -1px;
+    color: white;
+    text-shadow: 0px 0px 8px rgb(255, 255, 255);
+    rotate: x 0deg;
+    transition: all 0.8s;
+}
+.pop-wrapper-1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    background-image: radial-gradient(circle, transparent 125px, rgb(0, 0, 0));
+    width: 0%;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    border-radius: 2vh;
+}
+.pop-wrapper-1:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+.pop-wrapper-1::after {
+    content: "";
+    width: 0px;
+    position: absolute;
+    z-index: -10;
+    inset: 62% 2vh 8vh;
+    background: linear-gradient(rgb(170, 111, 0),orange);
+    /* background: rgb(255, 255, 255); */
+    filter: blur(10vh);
+    rotate: x 58deg;
+    transition: all 0.4s;
+}
+.pop-wrapper-1:nth-child(2)::after {
+    content: "";
+    width: 0px;
+    object-position: center;
+    position: absolute;
+    z-index: -10;
+    inset: 62% 0vh 8vh;
+    background: linear-gradient(rgb(165, 140, 0),gold);
+    filter: blur(10vh);
+    rotate: x 58deg;
+    transition: all 0.4s;
+}
+.pop-wrapper:nth-child(3)::after {
+    content: "";
+    width: 0px;
+    position: absolute;
+    z-index: -10;
+    inset: 62% -2vh 8vh;
+    background: linear-gradient(rgb(165, 0, 0),red);
+    filter: blur(10vh);
+    rotate: x 58deg;
+    transition: all 0.4s;
+}
 header {
     position: relative;
     display: grid;
@@ -210,6 +359,7 @@ header {
     padding: 50px;
 }
 #back-button {
+    margin-top: 50px;
     cursor: none;
     scale: 0.7;
     display: flex;
@@ -462,9 +612,21 @@ a.navbar-item-link {
     bottom: -166%; text-align: center; color: rgb(220, 220, 220); font-size: 1.8vw; text-shadow: 0px 0px 14px white;
 }
 #store-title {
-    background-image: none; text-align: center; font-size: 8.85vw; text-shadow: 0px 1px 24px #ffffff;
+    background-image: none; text-align: center;
+}
+#shop-products-title {
+    font-size: 6vw; margin-top: 15vh; margin-bottom: 5vh; margin-left: -46vw; text-align: center;
 }
 @media only screen and (max-width: 600px) {
+    #shop-products-title {
+        font-size: 6vw; text-align: center; margin-left: 0 !important;
+    }
+    #accessories {
+        margin-left: 0 !important;
+    }
+    #essentials {
+        margin-left: 0vw !important;
+    }
     .product-grid {
         display: flex;
         padding: 0;
@@ -486,6 +648,18 @@ a.navbar-item-link {
         rotate: x 0deg;
     }
     .pop-wrapper {
+        padding: 0;
+        margin-top: 9vh; margin-bottom: 8vh;
+        cursor: none;
+        scale: 2;
+    }
+    .pop-wrapper-1:hover, 
+    .pop-wrapper-1:nth-child(2):hover, 
+    .pop-wrapper-1:nth-child(3):hover {
+        cursor: none;
+        rotate: x 0deg;
+    }
+    .pop-wrapper-1 {
         padding: 0;
         margin-top: 9vh; margin-bottom: 8vh;
         cursor: none;
@@ -540,7 +714,7 @@ a.navbar-item-link {
         cursor: none;
     }
     #store-title {
-        background-image: none; text-align: center; font-size: 25vw; text-shadow: 0px 1px 24px #ffffff;
+        background-image: none; text-align: center;
     }
     #filler-section {
         min-height: 50vh;
