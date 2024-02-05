@@ -1,0 +1,398 @@
+::-webkit-scrollbar {
+    display: none;
+    
+}
+* {
+    max-width: 100vw;
+    overflow-x: clip;
+    overflow-y: visible;
+}
+/* @font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+} */
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+html {
+    scroll-behavior: smooth;
+}
+h1, h2, h3, p, b {
+    font-family: var(--system-ui);
+    font-weight: 550;
+}
+b {
+    font-weight: normal;
+}
+body {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "San Francisco";
+    cursor: none;
+}
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+input[type=submit] {
+    color: #ffffff; 
+    border: solid rgb(255, 255, 255); 
+    padding: 8px; 
+    font-size: 18px; 
+    border-radius: 4px; 
+    background-color: black;
+    transition: all 0.7s;
+}
+input[type=submit]:hover {
+    border: solid white;
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+    transition: all 0.7s;
+}
+select {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 1vw;
+}
+select:focus {
+    outline: none;
+}
+fieldset {
+    width: 40vw;
+}
+.form-example {
+    padding: 20px;
+    width: 60vw;
+    margin: auto;
+}
+.radio {
+    padding: 4vw;
+}
+.hidden4 {
+    scale: 1;
+    opacity: 0;
+    filter: blur(2px);
+    transform: perspective(40vw) translate(0px,-200px);
+    transition: all 2s ease-in;
+}
+.shown4 {
+    opacity: 1;
+    scale: 0.9;
+    filter: blur(0);
+    transform: perspective(40vw) translate(0px,0px) rotateX(0deg);
+    animation: 2s papa ease-in-out;
+}
+.hidden1 {
+    opacity: 0;
+    transform: translate(0px,400px);
+    transition: all 1s;
+}
+.shown1 {
+    text-shadow: 0px 0px 24px #ffffff;
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0px,0px);
+}
+.hidden2 {
+    opacity: 0;
+    filter: blur(7px);
+    transform: translate(310px,-300px);
+    animation-delay: 0.4s;
+    transition: all 1s;
+}
+.shown2 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0px,0px);
+}
+.hidden3 {
+    scale: 1.8;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate(0px,200px);
+    transition: all 0.7s;
+}
+.shown3 {
+    scale: 1;
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0px,0px);
+    text-shadow: 0px 0px 24px #ffffff;
+}
+
+.navbar-el {
+    width: 100vw;
+    height: 7.5vh;
+    position: fixed;
+    background-color: #000000;
+    z-index: 1;
+    text-align: center;
+}
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 9vw);
+    place-items: center;
+    justify-content: center;
+    border: none;
+}
+.navbar-item {
+    height: 7.5vh;
+    width: 9vw;
+    background-color: #000000;
+    border: none;
+}
+
+a.navbar-item-link {
+    font-size: 1.1vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(220, 220, 220);
+}
+.navbar-item:hover {
+    text-shadow: 0px 3px 20px #ffffff;
+    animation: underliner 0.5s ease forwards;
+    cursor: none;
+}
+.logo {
+    margin: auto;
+    color: white;
+}
+.cursor {
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: fixed;
+    transition-duration: 0ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%,-50%);
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    z-index: 2;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    pointer-events: none;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+.floor-shadow {
+    background: none;
+    border: none;
+    pointer-events: none;
+    padding: 50px;
+}
+.floor-shadow::after {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    top: 44vh;
+    left: 25vw;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 65%;
+    transform: perspective(80vh) rotateX(75deg) translateZ(8vh);
+    filter: blur(300px) opacity(0.4);
+    animation: 5s fade-in;
+}
+/*popup, -4^(-ex)*cos(20x)  */
+@keyframes papa {
+    from {
+        transform: perspective(40vw) rotateX(30deg) translate(0,-150px);
+    }/*
+    14.78% {
+        transform: rotateX(-50.4deg);
+    }
+    30.48% {
+        transform: rotateX(28.035deg);
+    }
+    80% { 46.19%
+        transform: rotateX(-19deg); -15.516deg
+    }
+    61.9% {
+        transform: rotateX(8.586deg);
+    }
+    77.61% {
+        transform: rotateX(-4.752deg);
+    }
+    93.32% {
+        transform: rotateX(2.628deg);
+    }*/
+    to {
+        transform: perspective(40vw) rotateX(0deg);
+        scale: 0.9;
+    }
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translate(0px,200px);
+    }
+    to {
+        opacity: 0.;
+    }
+}
+
+@keyframes underliner {
+    from {
+        text-decoration: none;
+        text-decoration-color: #000000;
+    }
+    to {
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+        background-color: #2e2e2e;
+    }
+}
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+#content-title {
+    color: #ffffff;text-align: center; font-size: 8.85vw; text-shadow: 0px 1px 24px #ffffff;
+}
+#mit-desc {
+    list-style-type: none; display: grid; grid-template-columns: 44vw 300px;
+}
+#stanford-desc {
+    list-style-type: none; display: grid; grid-template-columns: 44vw 300px;
+}
+#cal-desc {
+    list-style-type: none; display: grid; grid-template-columns: 44vw 300px;
+}
+#college-title {
+    font-size: 4vw; margin: 0;
+}
+#mit-image {
+    width: 30vw; transform: translate(0,40px);
+}
+#stanford-image {
+    transform: translate(-40px,-40px); width: 35vw;
+}
+#cal-image {
+    margin-top: 20px; transform: translate(-60px,0); width: 35vw;
+}
+@media only screen and (max-width: 600px) {
+    #mit-image {
+        width: 80vw;
+        transform: none;
+    }
+    #stanford-image {
+        width: 80vw;
+        transform: none;
+    }
+    #cal-image {
+        width: 80vw;
+        transform: none;
+    }
+    #content-title {
+        font-size: 18vw;
+    }
+    #college-title {
+        font-size: 12vw;
+    }
+    #mit-desc {
+        display: flex;
+        flex-direction: column;
+    }
+    #stanford-desc {
+        display: flex;
+        flex-direction: column;
+    }
+    #cal-desc {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar-el {
+        width: 100vw;
+        height: 7.5vh;
+        position: fixed;
+        background-color: #000000;
+        z-index: 50;
+        text-align: center;
+    }
+    .navbar {
+        width: 100vw;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(5, 20vw);
+        place-items: center;
+        justify-content: center;
+        border: none;
+    }
+    .navbar-item {
+        height: 7.5vh;
+        min-width: 20vw;
+        background-color: #000000;
+        border: none;
+    }
+    a.navbar-item-link {
+        font-size: 2.3vw;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(220, 220, 220);
+    }
+    .navbar-item:hover {
+        text-shadow: 0px 3px 20px #ffffff;
+        cursor: none;
+    }
+}

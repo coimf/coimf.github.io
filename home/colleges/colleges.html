@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colleges</title>
+    <script defer src="/home/indexAnim.js"></script>
+    <link rel="stylesheet" href="colleges.css">
+    <script defer src="/home/cursorScript.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7193509719776699"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <nav class="navbar-el">
+        <ul class="navbar">
+            <button onclick="window.location.href='/home/welcome/index.html'" class="navbar-item">
+                <a class="navbar-item-link logo">
+                    Home
+                </a>
+            </button>
+            <button onclick="window.location.href='/home/brachistochrones/brachistochrones.html'" class="navbar-item">
+                <a class="navbar-item-link">
+                    Brachistochrone
+                </a>
+            </button>
+            <button onclick="window.location.href='/home/colleges/colleges.html'" class="navbar-item">
+              <a class="navbar-item-link">
+                  Colleges
+              </a>
+          </button>
+            <button onclick="window.location.href='/home/store/store.html'" class="navbar-item">
+                <a class="navbar-item-link">
+                    Store
+                </a>
+              </button>
+            <button onclick="window.location.href='/home/about/about.html'" class="navbar-item">
+                <a class="navbar-item-link">
+                    About Me
+                </a>
+            </button>
+        </ul>
+    </nav>
+    <div id="content-wrapper">
+    <section>
+        <button class="floor-shadow">
+            <h1 class="hidden4" id="content-title">
+                Colleges
+            </h1>
+        </button>
+    </section>
+    <section>
+        <ul class="hidden1" id="mit-desc">
+            <li>
+                <h3 id="college-title">1. Massachusetts Institute of Technology</h3>
+                <ul style="list-style-type: none; margin: 0; padding: 0; font-size: 24px;">
+                    <li>
+                        <p>
+                        Location: Cambridge, MA<br>
+                        Acceptance rate: &lt;4%
+                    </p>
+                    </li>
+                    <li>
+                        <p style="font-size: 20px; color: #f6f6f6; margin-right: 40px; text-shadow: none;">
+                            Helps students materialize their technology and helps business realities succeed.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img 
+                class="hidden1" 
+                src="https://res.cloudinary.com/dpcbzfiye/image/upload/w_1620,c_fit,dpr_auto,f_auto,q_auto,fl_progressive/v1618763408/hrc9mz8f4ary6g0qibzn.jpg" 
+                id="mit-image">
+            </li>
+        </ul>
+    </section>
+    <section>
+        <ul class="hidden3" id="stanford-desc">
+            <li>
+                <h3 id="college-title">
+                    2. Stanford
+                </h3>
+                <ul style="list-style-type: none; margin: 0; padding: 0; font-size: 24px;">
+                    <li>
+                        <p>
+                            Location: Stanford, CA<br>
+                            Acceptance rate: &lt;4%<br>
+                    </p>
+                    </li>
+                    <li>
+                        <p style="font-size: 20px; color: #f6f6f6; margin-right: 40px; text-shadow: none;">
+                            Founded 150 years ago, Stanford aims to amplify its effect on America's society.
+                            Stanford has 20 libraries holding over 12<br> million items and has a budget nearing 2 billion USD.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img class="hidden3" 
+                id="stanford-image"
+                src="https://media.istockphoto.com/id/1137558833/photo/stanford-university-at-dawn.jpg?s=612x612&w=0&k=20&c=3qBogbIsUipBXsBQ95lFnLNqNWcLnlbFhChWDqRDRWc=">
+            </li>
+        </ul>
+    </section>
+    <section>
+        <ul class="hidden3" id="cal-desc">
+            <li>
+                <h3 id="college-title">
+                    3. California Institute of Technology
+                </h3>
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
+                    <li>
+                        <p style="font-size: 20px; color: #bcbcbc; margin-right: 40px; text-shadow: none;">
+                            
+                            
+                        </p>
+                    </li>
+                </ul>
+                <ul style="list-style-type: none; margin: 0; padding: 0; font-size: 24px;">
+                    <li>
+                        <p>
+                            Location: Pasadena, CA<br>
+                            Acceptance rate: &lt;4%<br>
+                        </p>
+                    </li>
+                    <li>
+                        <p style="font-size: 20px; color: #f6f6f6; margin-right: 40px; text-shadow: none;">
+                            Cal has some of the best athletes along with great development. 
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img class="hidden3" 
+                id="cal-image"
+                src="https://s.abcnews.com/images/Health/stanford-campus-ap-jt-210723_1627036806303_hpMain.jpg">
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>
+            <div>
+                <form action="./recieved.html" method="get" class="form-example" style="width: 100vw;">
+                    <h3 style="transform: translate(20vw,0);">
+                        Submit your opinion:
+                    </h3>
+                    <div class="form-example">
+                        <label for="name">Full name: </label>
+                        <input type="text" name="name" id="name" required />
+                    </div>
+                    <div class="form-example">
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+                    <div class="form-example">
+                        <fieldset>
+                            <legend>
+                                Choose the college you want to attend
+                            </legend>
+                            <input class="radio" type="radio" id="MIT" name="college" value="M" required>
+                            <label for="MIT">Massachusetts Institute of Technology</label>
+                            <input class="radio" type="radio" id="Stanford" name="college" value="S" required>
+                            <label for="Stanford">Stanford</label>
+                            <input class="radio" type="radio" id="California Institute of Technology" name="college" value="C" required>
+                            <label for="California Institute of Technology">California Institute of Technology</label>
+                            <input class="radio" type="radio" id="other" name="college" value="O" required>
+                            <label for="other">Other <input type="text"></label>
+                        </fieldset>
+                    </div>
+                    <div class="form-example">
+                        <fieldset>
+                            <legend>
+                                Add extra comments about your college
+                            </legend>
+                            <textarea id="college-review" name="college-review" rows="5" cols="70" minlength="5">Enter your response</textarea>
+                        </fieldset>
+                    </div>
+                    <div class="form-example">
+                        <fieldset>
+                            <legend>
+                                Select your gender
+                            </legend>
+                            <input class="radio" type="radio" id="Male" name="gender" value="M">
+                            <label for="Male">Male</label>
+                            <input class="radio" type="radio" id="Female" name="gender" value="F">
+                            <label for="Female">Female</label>
+                        </fieldset>
+                    </div>
+                    <div class="form-example">
+                        <fieldset>
+                            <legend>
+                                Choose your age
+                            </legend>
+                            <label for="age">
+                                <select name="age" id="age">
+                                    <option value="under 5 years">
+                                        under 5 years
+                                    </option>
+                                    <option value="6-10 years">
+                                        6-10
+                                    </option>
+                                    <option value="11-12 years">
+                                        11-12
+                                    </option>
+                                    <option value="13-14 years">
+                                        13-14
+                                    </option>
+                                    <option value="15-16 years">
+                                        15-16
+                                    </option>
+                                    <option value="17+ years">
+                                        17+
+                                    </option>
+                                </select>
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="form-example">
+                        <input type="submit" value="Submit">
+                    </div>
+                  </form>
+            </div>
+        </h3>
+    </section>
+    </div>
+</h2>
+</body>
+</html>
