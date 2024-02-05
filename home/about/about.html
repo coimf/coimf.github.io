@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <script defer src="/home/indexAnim.js"></script>
+    <script defer src="/home/cursorScript.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7193509719776699"
+     crossorigin="anonymous"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }   
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        /* @font-face {
+            font-family: "San Francisco";
+            font-weight: 400;
+            src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+        } */
+        :root {
+            --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+        h1, h2, h3, p, b {
+            font-family: var(--system-ui);
+            font-weight: 550;
+        }
+        b {
+            font-weight: normal;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        body > * {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: "San Francisco";
+            cursor: none;
+        }
+        section {
+            display: grid;
+            place-items: center;
+            align-content: center;
+            min-height: 100vh;
+        }
+        #alien-image {
+            width: 140%
+        }
+        #email-link, #discord-link {
+            color: white;
+        }
+        #email-link:hover, #discord-link:hover {
+            text-shadow: 0px 0px 12px white;
+            cursor: none;
+        }
+        #title {
+            text-align: center; font-size: 8.85vw; text-shadow: 0px 1px 24px #ffffff;
+        }
+        .cursor {
+            z-index: 2;
+            width: 20px;
+            height: 20px;
+            border: 1px solid white;
+            border-radius: 50%;
+            position: fixed;
+            transition-duration: 0ms;
+            transition-timing-function: ease-out;
+            transform: translate(-50%,-50%);
+            animation: cursorAnim .5s infinite alternate;
+            pointer-events: none;
+        }
+
+        .cursor::after {
+            z-index: 2;
+            content: "";
+            width: 20px;
+            height: 20px;
+            position: fixed;
+            border: 8px solid gray;
+            border-radius: 50%;
+            opacity: .5;
+            top: -8px;
+            left: -8px;
+            pointer-events: none;
+            animation: cursorAnim2 .5s infinite alternate;
+        }
+        @keyframes underliner {
+            from {
+                text-decoration: none;
+                text-decoration-color: #000000;
+            }
+            to {
+                text-decoration: underline;
+                text-decoration-color: #ffffff;
+                background-color: #2e2e2e;
+            }
+        }
+        @keyframes cursorAnim {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(.7);
+            }
+        }
+
+        @keyframes cursorAnim2 {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(.4);
+            }
+        }
+
+        @keyframes cursorAnim3 {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(3);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .expand {
+            animation: cursorAnim3 .5s forwards;
+            border: 1px solid red;
+        }
+        .hidden {
+            scale: 1.05;
+            opacity: 0;
+            filter: blur(28px);
+            transform: translate(0px,-44px) rotate(0deg);
+            transition: all 1s;
+        }
+        .shown {
+            scale: 1;
+            opacity: 1;
+            filter: blur(0);
+            transform: translate(0px,40px) rotate(0deg);
+        }
+        .hidden1 {
+            opacity: 0;
+            scale: 1;
+            filter: blur(28px);
+            transform: translate(0px,400px) rotate(0deg);
+            transition: all 1s ease-in-out;
+        }
+        .shown1 {
+            transition-delay: 0ms;
+            text-shadow: 0px 0px 24px #008080;
+            opacity: 1;
+            filter: blur(0);
+            transform: translate(0px,0px) rotate(0deg);
+        }
+        .hidden2 {
+            opacity: 0;
+            filter: blur(7px);
+            transform: translate(12vw,0px);
+            animation-delay: 0.4s;
+            transition: 1s;
+        }
+        .shown2 {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0px);
+        }
+                
+        .navbar-el {
+            width: 100vw;
+            height: 7.5vh;
+            position: fixed;
+            background-color: #000000;
+            z-index: 1;
+            text-align: center;
+        }
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(5, 9vw);
+            place-items: center;
+            justify-content: center;
+            border: none;
+        }
+        .navbar-item {
+            height: 7.5vh;
+            width: 9vw;
+            background-color: #000000;
+            border: none;
+        }
+
+        a.navbar-item-link {
+            font-size: 1.1vw;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(220, 220, 220);
+        }
+        .navbar-item:hover {
+            text-shadow: 0px 3px 20px #ffffff;
+            animation: underliner 0.5s ease forwards;
+            cursor: none;
+        }
+        .logo {
+            margin: auto;
+            color: white;
+        }
+        #wrap {
+            list-style-type: none; display: grid; grid-template-columns: 480px 300px;
+        }
+        #title-sub {
+            font-size: 7vw; margin: 0;
+        }
+        #about-text {
+            font-size: 2vw; list-style-type: none; margin: 0; padding: 0;
+        }
+        @media only screen and (max-width: 600px) {
+            #alien-image {
+                width: 80vw;
+                padding: 0;
+                margin: 0;
+            }
+            #about-text {
+                font-size: 4vw;
+                text-align: center;
+            }
+            #title-sub {
+                font-size: 12vw;
+                text-align: center;
+            }
+            #wrap {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+            #title {
+                font-size: 14vw;
+            }
+            .navbar-el {
+                width: 100vw;
+                height: 7.5vh;
+                position: fixed;
+                background-color: #000000;
+                z-index: 50;
+                text-align: center;
+            }
+            .navbar {
+                width: 100vw;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                display: grid;
+                grid-template-columns: repeat(5, 20vw);
+                place-items: center;
+                justify-content: center;
+                border: none;
+            }
+            .navbar-item {
+                height: 7.5vh;
+                min-width: 20vw;
+                background-color: #000000;
+                border: none;
+            }
+            a.navbar-item-link {
+                font-size: 2.3vw;
+                text-align: center;
+                text-decoration: none;
+                color: rgb(220, 220, 220);
+            }
+            .navbar-item:hover {
+                text-shadow: 0px 3px 20px #ffffff;
+                cursor: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+    <nav class="navbar-el">
+        <ul class="navbar">
+            <button onclick="window.location.href='/home/welcome/index.html'" class="navbar-item">
+                <a class="navbar-item-link logo">
+                    Home
+                </a>
+            </button>
+            <button onclick="window.location.href='/home/brachistochrones/brachistochrones.html'" class="navbar-item">
+                <a class="navbar-item-link">
+                    Brachistochrone
+                </a>
+            </button>
+            <button onclick="window.location.href='/home/colleges/colleges.html'" class="navbar-item">
+              <a class="navbar-item-link">
+                  Colleges
+              </a>
+          </button>
+            <button onclick="window.location.href='/home/store/store.html'" class="navbar-item">
+                <a class="navbar-item-link">
+                    Store
+                </a>
+              </button>
+            <button onclick="window.location.href='/home/about/about.html'" class="navbar-item">
+                <a class="navbar-item-link">
+                    About Me
+                </a>
+            </button>
+        </ul>
+    </nav>
+    <div id="content-wrapper">
+    <section>
+    <h1 class="hidden" id="title">
+        About Me
+    </h1>
+    </section>
+    <section>
+        <ul class="hidden1" id="wrap">
+            <li>
+                <h3 id="title-sub">About</h3>
+                <ul id="about-text">
+                    <li>
+                        <p>I'm not an alien because I drink water. </p>
+                        <p>I don't suck at math. <br>Or maybe I do.</p>
+                        <p>
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <b style="text-decoration: underline;">Contact information:</b>
+                                <li>
+                                    <a id="email-link" href="https://mail.google.com/mail/?view=cm&to=fiovwndjol@gmail.com&su=Website%20inquiry">
+                                        Email: fiovwndjol@gmail.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="discord-link" href="https://discord.com/app">
+                                        Discord: fiovwndjol (#0845)
+                                    </a>
+                                </li>
+                            </ul>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img class="hidden2" src="/pictures/alien.png" id="alien-image">
+            </li>
+        </ul>
+    </section>
+    </div>
+    
+</body>
+</html>
