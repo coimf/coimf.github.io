@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTY8TE7913"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-MTY8TE7913');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7193509719776699"
+    crossorigin="anonymous"></script>
+    <meta name="description" content="Experience a newly designed version of Jeopardy, perfect for classrooms. Built with a smooth UI.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy Redesigned</title>
+    <script defer src="jeopardy.js"></script>
+    <link rel="stylesheet" href="jeopardy.css">
+</head>
+<body onload="resetPageScroll()">
+    <div id="loadScreen">
+        <div id="load-container">
+            <span id="sliderA">Jeopardy</span>
+            <span id="sliderBC">
+                <span id="sliderB">Redesigned<br>
+                    <p>A brand-new, seamless interface.</p>
+                </span>
+            </span>
+        </div>
+    </div>
+    <div id="content-wrapper">
+        <button onclick="toggleSetup()" id="toggle-setup-button">
+            <svg id="setupGear" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
+style="fill:#fff;">
+<path d="M 24 4 C 22.423103 4 20.902664 4.1994284 19.451172 4.5371094 A 1.50015 1.50015 0 0 0 18.300781 5.8359375 L 17.982422 8.7382812 C 17.878304 9.6893592 17.328913 10.530853 16.5 11.009766 C 15.672739 11.487724 14.66862 11.540667 13.792969 11.15625 L 13.791016 11.15625 L 11.125 9.9824219 A 1.50015 1.50015 0 0 0 9.4257812 10.330078 C 7.3532865 12.539588 5.7626807 15.215064 4.859375 18.201172 A 1.50015 1.50015 0 0 0 5.4082031 19.845703 L 7.7734375 21.580078 C 8.5457929 22.147918 9 23.042801 9 24 C 9 24.95771 8.5458041 25.853342 7.7734375 26.419922 L 5.4082031 28.152344 A 1.50015 1.50015 0 0 0 4.859375 29.796875 C 5.7625845 32.782665 7.3519262 35.460112 9.4257812 37.669922 A 1.50015 1.50015 0 0 0 11.125 38.015625 L 13.791016 36.841797 C 14.667094 36.456509 15.672169 36.511947 16.5 36.990234 C 17.328913 37.469147 17.878304 38.310641 17.982422 39.261719 L 18.300781 42.164062 A 1.50015 1.50015 0 0 0 19.449219 43.460938 C 20.901371 43.799844 22.423103 44 24 44 C 25.576897 44 27.097336 43.800572 28.548828 43.462891 A 1.50015 1.50015 0 0 0 29.699219 42.164062 L 30.017578 39.261719 C 30.121696 38.310641 30.671087 37.469147 31.5 36.990234 C 32.327261 36.512276 33.33138 36.45738 34.207031 36.841797 L 36.875 38.015625 A 1.50015 1.50015 0 0 0 38.574219 37.669922 C 40.646713 35.460412 42.237319 32.782983 43.140625 29.796875 A 1.50015 1.50015 0 0 0 42.591797 28.152344 L 40.226562 26.419922 C 39.454197 25.853342 39 24.95771 39 24 C 39 23.04229 39.454197 22.146658 40.226562 21.580078 L 42.591797 19.847656 A 1.50015 1.50015 0 0 0 43.140625 18.203125 C 42.237319 15.217017 40.646713 12.539588 38.574219 10.330078 A 1.50015 1.50015 0 0 0 36.875 9.984375 L 34.207031 11.158203 C 33.33138 11.54262 32.327261 11.487724 31.5 11.009766 C 30.671087 10.530853 30.121696 9.6893592 30.017578 8.7382812 L 29.699219 5.8359375 A 1.50015 1.50015 0 0 0 28.550781 4.5390625 C 27.098629 4.2001555 25.576897 4 24 4 z M 24 7 C 24.974302 7 25.90992 7.1748796 26.847656 7.3398438 L 27.035156 9.0644531 C 27.243038 10.963375 28.346913 12.652335 30 13.607422 C 31.654169 14.563134 33.668094 14.673009 35.416016 13.904297 L 37.001953 13.207031 C 38.219788 14.669402 39.183985 16.321182 39.857422 18.130859 L 38.451172 19.162109 C 36.911538 20.291529 36 22.08971 36 24 C 36 25.91029 36.911538 27.708471 38.451172 28.837891 L 39.857422 29.869141 C 39.183985 31.678818 38.219788 33.330598 37.001953 34.792969 L 35.416016 34.095703 C 33.668094 33.326991 31.654169 33.436866 30 34.392578 C 28.346913 35.347665 27.243038 37.036625 27.035156 38.935547 L 26.847656 40.660156 C 25.910002 40.82466 24.973817 41 24 41 C 23.025698 41 22.09008 40.82512 21.152344 40.660156 L 20.964844 38.935547 C 20.756962 37.036625 19.653087 35.347665 18 34.392578 C 16.345831 33.436866 14.331906 33.326991 12.583984 34.095703 L 10.998047 34.792969 C 9.7799772 33.330806 8.8159425 31.678964 8.1425781 29.869141 L 9.5488281 28.837891 C 11.088462 27.708471 12 25.91029 12 24 C 12 22.08971 11.087719 20.290363 9.5488281 19.160156 L 8.1425781 18.128906 C 8.8163325 16.318532 9.7814501 14.667839 11 13.205078 L 12.583984 13.902344 C 14.331906 14.671056 16.345831 14.563134 18 13.607422 C 19.653087 12.652335 20.756962 10.963375 20.964844 9.0644531 L 21.152344 7.3398438 C 22.089998 7.1753403 23.026183 7 24 7 z M 24 16 C 19.599487 16 16 19.59949 16 24 C 16 28.40051 19.599487 32 24 32 C 28.400513 32 32 28.40051 32 24 C 32 19.59949 28.400513 16 24 16 z M 24 19 C 26.779194 19 29 21.220808 29 24 C 29 26.779192 26.779194 29 24 29 C 21.220806 29 19 26.779192 19 24 C 19 21.220808 21.220806 19 24 19 z"></path>
+</svg>
+        </button>
+        <div id="setup" class="content opened">
+            <div id="questionInputList">
+                
+                <div style="font-size: 3vw; display: flex; gap: 70vw;">
+                    <h1 style="font-size: 3vw;">Setup</h1>
+                    <button id="finishSetup" onclick="saveSetup()">
+                        Save
+                    </button>
+                </div>
+                <h2>
+                    <div id="teamName">Teams<br></div>
+                    <div style="font-size: 1rem; margin-top: 3vh;">Only fill in this section if you want to play the sample version!</div>
+                </h2>
+                <div class="input">
+                    <label for="numTeams">Number of teams: </label>
+                    <input type="number" class="teamInputLabel" name="theme" id="numTeams" min="1" max="10">
+                </div>
+                <div class="input">
+                    <label for="teamNameL1">Team name 1:</label>
+                    <input type="text" class="teamInputLabel" name="team" id="teamNameL1">
+                </div>
+                <div class="input">
+                    <label for="teamNameL2">Team name 2:</label>
+                    <input type="text" class="teamInputLabel" name="team" id="teamNameL2">
+                </div>
+                <div class="input">
+                    <label for="teamNameL3">Team name 3:</label>
+                    <input type="text" class="teamInputLabel" name="team" id="teamNameL3">
+                </div>
+                <div class="input">
+                    <label for="teamNameL4">Team name 4:</label>
+                    <input type="text" class="teamInputLabel" name="team" id="teamNameL4">
+                </div>
+                <div class="input">
+                    <label for="teamNameL5">Team name 5:</label>
+                    <input type="text" class="teamInputLabel" name="team" id="teamNameL5">
+                </div>
+                <div class="input">
+                    <label for="teamNameL6">Team name 6:</label>
+                    <input type="text" class="teamInputLabel" name="team" id="teamNameL6">
+                </div>
+                <div class="input">
+                    <label for="teamNameL7">Team name 7:</label>
+                    <input type="text" class="teamInputLabel" name="team" id="teamNameL7">
+                </div>
+                <div class="input">
+                    <label for="teamNameL8">Team name 8:</label>
+                    <input type="text" class="teamInputLabel" name="team" id="teamNameL8">
+                </div>
+                <div class="input">
+                    <label for="teamNameL9">Team name 9:</label>
+                    <input type="text" class="teamInputLabel" name="team" id="teamNameL9">
+                </div>
+                <div class="input">
+                    <label for="teamNameL10">Team name 10:</label>
+                    <input type="text" class="teamInputLabel" name="team" id="teamNameL10">
+                </div>
+                <h2>Configuration</h2>
+                <div class="input">
+                    <label for="theme">Topic</label>
+                    <input type="text" class="themeInputLabel" name="theme" id="theme">
+                </div>
+                <div class="input">
+                    <label for="category1">Category 1</label>
+                    <input type="text" class="categoryInputLabelSetup" name="theme" id="category1">
+                </div>
+                <div class="input">
+                    <label for="category2">Category 2</label>
+                    <input type="text" class="categoryInputLabelSetup" name="theme" id="category2">
+                </div>
+                <div class="input">
+                    <label for="category3">Category 3</label>
+                    <input type="text" class="categoryInputLabelSetup" name="theme" id="category3">
+                </div>
+                <div class="input">
+                    <label for="category4">Category 4</label>
+                    <input type="text" class="categoryInputLabelSetup" name="theme" id="category4">
+                </div>
+                <div class="input">
+                    <label for="category5">Category 5</label>
+                    <input type="text" class="categoryInputLabelSetup" name="theme" id="category5">
+                </div>
+                <h2>Questions & Answers</h2>
+                <b>Fill in the questions by row. For example, question 1's values will go to cell (1,1), and question 9's values will go to cell (4,2).</b>
+                <div class="input">
+                    <label for="question1">Question 1</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question1">
+                    <label for="answer1">Answer 1</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer1">
+                </div>
+                <div class="input">
+                    <label for="question2">Question 2</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question2">
+                    <label for="answer2">Answer 2</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer2">
+                </div>
+                <div class="input">
+                    <label for="question3">Question 3</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question3">
+                    <label for="answer3">Answer 3</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer3">
+                </div>
+                <div class="input">
+                    <label for="question4">Question 4</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question4">
+                    <label for="answer4">Answer 4</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer4">
+                </div>
+                <div class="input">
+                    <label for="question5">Question 5</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question5">
+                    <label for="answer5">Answer 5</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer5">
+                </div>
+                <div class="input">
+                    <label for="question6">Question 6</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question6">
+                    <label for="answer6">Answer 6</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer6">
+                </div>
+                <div class="input">
+                    <label for="question7">Question 7</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question7">
+                    <label for="answer7">Answer 7</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer7">
+                </div>
+                <div class="input">
+                    <label for="question8">Question 8</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question8">
+                    <label for="answer8">Answer 8</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer8">
+                </div>
+                <div class="input">
+                    <label for="question9">Question 9</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question9">
+                    <label for="answer9">Answer 9</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer9">
+                </div>
+                <div class="input">
+                    <label for="question10">Question 10</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question10">
+                    <label for="answer10">Answer 10</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer10">
+                </div>
+                <div class="input">
+                    <label for="question11">Question 11</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question11">
+                    <label for="answer11">Answer 11</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer11">
+                </div>
+                <div class="input">
+                    <label for="question12">Question 12</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question12">
+                    <label for="answer12">Answer 12</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer12">
+                </div>
+                <div class="input">
+                    <label for="question13">Question 13</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question13">
+                    <label for="answer13">Answer 13</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer13">
+                </div>
+                <div class="input">
+                    <label for="question14">Question 14</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question14">
+                    <label for="answer14">Answer 14</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer14">
+                </div>
+                <div class="input">
+                    <label for="question15">Question 15</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question15">
+                    <label for="answer15">Answer 15</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer15">
+                </div>
+                <div class="input">
+                    <label for="question16">Question 16</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question16">
+                    <label for="answer16">Answer 16</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer16">
+                </div>
+                <div class="input">
+                    <label for="question17">Question 17</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question17">
+                    <label for="answer17">Answer 17</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer17">
+                </div>
+                <div class="input">
+                    <label for="question18">Question 18</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question18">
+                    <label for="answer18">Answer 18</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer18">
+                </div>
+                <div class="input">
+                    <label for="question19">Question 19</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question19">
+                    <label for="answer19">Answer 19</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer19">
+                </div>
+                <div class="input">
+                    <label for="question20">Question 20</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question20">
+                    <label for="answer20">Answer 20</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer20">
+                </div>
+                <div class="input">
+                    <label for="question21">Question 21</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question21">
+                    <label for="answer21">Answer 21</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer21">
+                </div>
+                <div class="input">
+                    <label for="question22">Question 22</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question22">
+                    <label for="answer22">Answer 22</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer22">
+                </div>
+                <div class="input">
+                    <label for="question23">Question 23</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question23">
+                    <label for="answer23">Answer 23</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer23">
+                </div>
+                <div class="input">
+                    <label for="question24">Question 24</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question24">
+                    <label for="answer24">Answer 24</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer24">
+                </div>
+                <div class="input" style="margin-bottom: 5vh;">
+                    <label for="question25">Question 25</label>
+                    <input type="text" class="questionInputLabel" name="question" id="question25">
+                    <label for="answer25">Answer 25</label>
+                    <input type="text" class="answerInputLabel" name="answer" id="answer25">
+                </div>
+            </div>
+        </div>
+        <div id="main" class="content closed">
+            
+            <h1 id="title">
+                Jeopardy
+            </h1>
+
+            <h3 id="sub-title">
+                <i id="sub-title-placeholder">Topic</i>
+            </h3>
+
+            <div id="categories-banner">
+                <div class="category" id="c1">
+                    <label for="category-1"></label>
+                    <input type="text" id="category-1" name="category" class="category-textbox" placeholder="Enter category" >
+                </div>
+                <div class="category" id="c2">
+                    <label for="category-2"></label>
+                    <input type="text" id="category-2" name="category" class="category-textbox" placeholder="Enter category" >
+                </div>
+                <div class="category" id="c3">
+                    <label for="category-3"></label>
+                    <input type="text" id="category-3" name="category" class="category-textbox" placeholder="Enter category" >
+                </div>
+                <div class="category" id="c4">
+                    <label for="category-4"></label>
+                    <input type="text" id="category-4" name="category" class="category-textbox" placeholder="Enter category" >
+                </div>
+                <div class="category" id="c5">
+                    <label for="category-5"></label>
+                    <input type="text" id="category-5" name="category" class="category-textbox" placeholder="Enter category" >
+                </div>
+            </div>
+
+            <dialog id="questionBox">
+                <h1 id="questionBoxTitle" style="font-size: 3rem; text-align: center;">Question!</h1>
+                <div style="margin-top: 20vh;">
+                    <p id="dialogQuestionText"></p>
+                    <p id="dialogAnswerText"></p>
+                    <button id="showAnswer" onclick="showAnswer()">
+                        Show answer
+                    </button>
+                    <button id="closeQuestion" onclick="closeQuestion()">
+                        Close question
+                    </button>
+                </div>
+            </dialog>
+
+            <div id="cards-wrapper">
+                <div id="q1" class="card" onclick="showQuestion(1)">
+                    <div class="cover"></div>
+                    <p>
+                            100
+                        </p>
+                </div>
+                <div id="q2" class="card" onclick="showQuestion(2)">
+                    <div class="cover"></div>
+                    <p>
+                            100
+                        </p>
+                </div>
+                <div id="q3" class="card" onclick="showQuestion(3)">
+                    <div class="cover"></div>
+                    <p>
+                            100
+                        </p>
+                </div>
+                <div id="q4" class="card" onclick="showQuestion(4)">
+                    <div class="cover"></div>
+                    <p>
+                            100
+                        </p>
+                </div>
+                <div id="q5" class="card" onclick="showQuestion(5)">
+                    <div class="cover"></div>
+                    <p>
+                            100
+                        </p>
+                </div>
+                <div id="q6" class="card" onclick="showQuestion(6)">
+                    <div class="cover"></div>
+                    <p>
+                            200
+                        </p>
+                </div>
+                <div id="q7" class="card" onclick="showQuestion(7)">
+                    <div class="cover"></div>
+                    <p>
+                            200
+                        </p>
+                </div>
+                <div id="q8" class="card" onclick="showQuestion(8)">
+                    <div class="cover"></div>
+                    <p>
+                            200
+                        </p>
+                </div>
+                <div id="q9" class="card" onclick="showQuestion(9)">
+                    <div class="cover"></div>
+                    <p>
+                            200
+                        </p>
+                </div>
+                <div id="q10" class="card" onclick="showQuestion(10)">
+                    <div class="cover"></div>
+                    <p>
+                            200
+                        </p>
+                </div>
+                <div id="q11" class="card" onclick="showQuestion(11)">
+                    <div class="cover"></div>
+                    <p>
+                            300
+                        </p>
+                </div>
+                <div id="q12" class="card" onclick="showQuestion(12)">
+                    <div class="cover"></div>
+                    <p>
+                            300
+                        </p>
+                </div>
+                <div id="q13" class="card" onclick="showQuestion(13)">
+                    <div class="cover"></div>
+                    <p>
+                            300
+                        </p>
+                </div>
+                <div id="q14" class="card" onclick="showQuestion(14)">
+                    <div class="cover"></div>
+                    <p>
+                            300
+                        </p>
+                </div>
+                <div id="q15" class="card" onclick="showQuestion(15)">
+                    <div class="cover"></div>
+                    <p>
+                            300
+                        </p>
+                </div>
+                <div id="q16" class="card" onclick="showQuestion(16)">
+                    <div class="cover"></div>
+                    <p>
+                            400
+                        </p>
+                </div>
+                <div id="q17" class="card" onclick="showQuestion(17)">
+                    <div class="cover"></div>
+                    <p>
+                            400
+                        </p>
+                </div>
+                <div id="q18" class="card" onclick="showQuestion(18)">
+                    <div class="cover"></div>
+                    <p>
+                            400
+                        </p>
+                </div>
+                <div id="q19" class="card" onclick="showQuestion(19)">
+                    <div class="cover"></div>
+                    <p>
+                            400
+                        </p>
+                </div>
+                <div id="q20" class="card" onclick="showQuestion(20)">
+                    <div class="cover"></div>
+                    <p>
+                            400
+                        </p>
+                </div>
+                <div id="q21" class="card" onclick="showQuestion(21)">
+                    <div class="cover"></div>
+                    <p>
+                            500
+                        </p>
+                </div>
+                <div id="q22" class="card" onclick="showQuestion(22)">
+                    <div class="cover"></div>
+                    <p>
+                            500
+                        </p>
+                </div>
+                <div id="q23" class="card" onclick="showQuestion(23)">
+                    <div class="cover"></div>
+                    <p>
+                            500
+                        </p>
+                </div>
+                <div id="q24" class="card" onclick="showQuestion(24)">
+                    <div class="cover"></div>
+                    <p>
+                            500
+                        </p>
+                </div>
+                <div id="q25" class="card" onclick="showQuestion(25)">
+                    <div class="cover"></div>
+                    <p>
+                            500
+                        </p>
+                </div>
+            </div>
+
+            <div id="name-section">
+                <div id="1" class="name">
+                    <div class="nameText" id="teamName1">Team1</div>
+                    <label for="score1">Score</label>
+                    <input type="text" class="scoreNum" name="score" id="score1">
+                </div>
+                <div id="2" class="name">
+                    <div class="nameText" id="teamName2">Team2</div>
+                    <label for="score2">Score</label>
+                    <input type="text" class="scoreNum" name="score" id="score2">
+                </div>
+                <div id="3" class="name">
+                    <div class="nameText" id="teamName3">Team3</div>
+                    <label for="score3">Score</label>
+                    <input type="text" class="scoreNum" name="score" id="score3">
+                </div>
+                <div id="4" class="name">
+                    <div class="nameText" id="teamName4">Team4</div>
+                    <label for="score4">Score</label>
+                    <input type="text" class="scoreNum" name="score" id="score4">
+                </div>
+                <div id="5" class="name">
+                    <div class="nameText" id="teamName5">Team5</div>
+                    <label for="score5">Score</label>
+                    <input type="text" class="scoreNum" name="score" id="score5">
+                </div>
+                <div id="6" class="name">
+                    <div class="nameText" id="teamName6">Team6</div>
+                    <label for="score6">Score</label>
+                    <input type="text" class="scoreNum" name="score" id="score6">
+                </div>
+                <div id="7" class="name">
+                    <div class="nameText" id="teamName7">Team7</div>
+                    <label for="score7">Score</label>
+                    <input type="text" class="scoreNum" name="score" id="score7">
+                </div>
+                <div id="8" class="name">
+                    <div class="nameText" id="teamName8">Team8</div>
+                    <label for="score8">Score</label>
+                    <input type="text" class="scoreNum" name="score" id="score8">
+                </div>
+                <div id="9" class="name">
+                    <div class="nameText" id="teamName9">Team9</div>
+                    <label for="score9">Score</label>
+                    <input type="text" class="scoreNum" name="score" id="score9">
+                </div>
+                <div id="10" class="name">
+                    <div class="nameText" id="teamName10">Team10</div>
+                    <label for="score10">Score</label>
+                    <input type="text" class="scoreNum" name="score" id="score10">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

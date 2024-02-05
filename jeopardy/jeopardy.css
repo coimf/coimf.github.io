@@ -1,0 +1,421 @@
+* {
+    background-color: black;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hideOverflow {
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#load-container::after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    background-image: linear-gradient(90deg,aqua,purple);
+    margin-left: -25%;
+    margin-top: 4%;
+    width: 30%;
+    height: 35%;
+    transform: perspective(750px) rotateX(69deg) translateZ(8vh) !important;
+    filter: blur(150px) opacity(0.5) ;
+    animation: lowerLayer 2.046s forwards;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+p {
+    font-size: 1.6rem;
+    text-shadow: 0px 0px 6px white;
+}
+dialog::backdrop {
+    backdrop-filter: blur(10px);
+}
+@keyframes remove-grayscale {
+    from{
+        filter: grayscale(1) brightness(0.7) saturate(0.7)
+    }
+    to{
+        filter: grayscale(0) brightness(1) saturate(2);
+    }
+}
+#setupGear {
+    background: transparent !important;
+    scale: 0.545;
+    opacity: 0.8;
+    transition: all 320ms;
+}
+#setupGear:hover {
+    cursor: pointer;
+    opacity: 1;
+    scale: 0.60;
+    rotate: 135deg;
+    fill: rgb(234, 149, 255) !important;
+}
+#closeQuestion,
+#showAnswer {
+    border: 3px white solid;
+    border-radius: 5px;
+    width: 10vw;
+    scale: 1.7;
+    transition: all 300ms;
+}
+#showAnswer {
+    margin-right: 10vw;
+}
+#closeQuestion:hover,
+#showAnswer:hover {
+    cursor: pointer;
+    scale: 1.87;
+    border: 3px purple solid;
+}
+#closeQuestion:focus,
+#showAnswer:focus {
+    scale: 1.7;
+}
+#questionBox {
+    height: 80vh;
+    width: 70vw;
+    z-index: 1000;
+    text-align: center;
+    place-items: center;
+    align-content: center;
+}
+#sub-title {
+    font-size: 1.5rem;
+}
+#toggle-setup-button {
+    position: relative;
+    padding: 0;
+    float: right;
+    border: none;
+    background: transparent;
+    z-index: 1000;
+}
+.noDisplay {
+    display: none !important;
+}
+.removed {
+    opacity: 0;
+}
+.content {
+    transition: all 0.4s;
+}
+.closed {
+    transform: translateX(46vw);
+    opacity: 0;
+    z-index: -1;
+}
+.opened {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+}
+@property --gangle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes rotation {
+    0%{
+        --gangle: 0deg;
+    }
+    100%{
+        --gangle: 360deg;
+    }
+}
+.card {
+    position: relative;
+    width: 16vw;
+    height: 8vh;
+    color: white;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    transition: all 600ms;
+}
+.card:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+.card .cover {
+    position: absolute;
+    z-index: 2;
+    background-color: black;
+    height: inherit;
+    width: inherit;
+}
+.card p {
+    position: absolute;
+    z-index: 3;
+}
+.card::before,
+.card::after {
+    opacity: 1;
+    z-index: -5 !important;
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: conic-gradient(from var(--gangle),aqua,darkorchid,aqua);
+    border-radius: inherit;
+    animation: rotation 8s linear infinite;
+}
+.card::after {
+    filter: blur(8px);
+}
+
+#name-section {
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    gap: 1vw;
+    margin-top: 3vh;
+}
+.name {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    align-content: center;
+    opacity: 0.4;
+    border-radius: 5px;
+    padding-top: 4px;
+    background-image: linear-gradient(rgb(182, 80, 255),black);
+    width: 8vw;
+    text-align: center;
+    transition: all 0.5s;
+}
+.name:hover {
+    opacity: 0.95;
+    transform: translateY(-0.4vh);
+}
+.nameText {
+    background-color: initial;
+    width: 7vw;
+    text-align: center;
+}
+label {
+    background-color: initial;
+    width: 7vw;
+    border-color: black;
+}
+.category {
+    width: 15.04vw;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 410ms;
+    background-color: rgb(40,40,40);
+    font-size: 1.23rem;
+}
+#categories-banner {
+    z-index: 6;
+    height: 4vh;
+    width: 83.5vw;
+    border: 1px rgb(130, 125, 125) solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    padding: 6px;
+    align-items: center;
+    place-content: center;
+    margin-bottom: 2vh;
+}
+.category-textbox {
+    background-color: rgb(40,40,40);
+    border-radius: 10px;
+    width: 15vw;
+    height: 3vh;
+    border: none;
+    text-align: center;
+    transition: all 400ms;
+}
+.category-textbox:hover {
+    cursor: pointer;
+    background-color: rgb(80, 80, 80);
+}
+.category-textbox:focus {
+    border: none;
+}
+.scoreNum {
+    background-color: rgb(40,40,40);
+    border-radius: 4px;
+    width: 7.5vw;
+    height: 2.4vh;
+    border: none;
+    text-align: center;
+    transition: all 400ms;
+    padding: 2px;
+}
+.scoreNum:hover {
+    cursor: pointer;
+    background-color: rgb(80, 80, 80);
+}
+#title {
+    color: white;
+    text-align: center;
+    font-size: 4vw;
+    margin: 50px auto 2vh auto;
+}
+#cards-wrapper {
+    background: transparent;
+    display: grid;
+    gap: 1.1vw 1.1vw;
+    grid-template-columns: 16vw 16vw 16vw 16vw 16vw;
+}
+#content-wrapper {
+    position: relative;
+    place-items: center;
+    align-content: center;
+    animation: fade-in 4.8s forwards ease-in-out;
+}
+#main {
+    background: linear-gradient(115deg,rgb(56, 0, 84),black 40%, black 55%,rgb(0, 59, 59));
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: grid;
+    align-content: center;
+    place-items: center;
+}
+#setup {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.input {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    width: auto;
+}
+.questionInputLabel, 
+.answerInputLabel,
+.themeInputLabel,
+.categoryInputLabelSetup,
+.teamInputLabel {
+    width: 25vw;
+    background-color: rgb(40,40,40);
+    border-radius: 10px;
+    height: 3vh;
+    border: none;
+    text-align: left;
+    padding-left: 10px;
+    transition: all 400ms;
+}
+.questionInputLabel:hover, .answerInputLabel:hover {
+    cursor: pointer;
+    background-color: rgb(80, 80, 80);
+}
+#questionInputList {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: 2vh;
+}
+#finishSetup {
+    position: relative;
+    border: 2px solid rgb(130, 125, 125);
+    border-radius: 15px;
+    background-color: #000;
+    font-size: 1.3rem;
+    margin: 2vw;
+    padding: 0.5vw;
+    transition: all 440ms;
+}
+#finishSetup:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+}
+#loadScreen {
+    overflow: hidden;
+    background-color: #000;
+    font-size: 5vw;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    animation: fade-out 5s forwards;
+}
+#sliderA {
+    opacity: 1;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    font-weight: 620;
+    background: transparent;
+    animation: upperLayer 1.826s forwards cubic-bezier(.89,.03,.59,.85);
+}
+
+#sliderBC {
+    overflow-x: hidden;
+    overflow-y: visible;
+    display:inline-flex;
+}
+
+#sliderB {
+    display: inline-block;
+    z-index: 1;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: linear-gradient(90deg, rgb(0, 195, 195), purple);
+    animation: lowerLayer 2.046s forwards cubic-bezier(.89,.03,.59,.85);
+}
+@keyframes fade-out {
+    from{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    88%{
+        opacity: 0;
+    }
+    96%{
+        opacity: 1;
+    }
+}
+@keyframes upperLayer {
+    0%{
+        transform:translateX(50%);
+    }
+    69%{
+        transform:translateX(50%);
+    }
+    to{
+        transform:translateX(0%);
+    }
+}
+
+@keyframes lowerLayer {
+    0%{
+        opacity: 0;
+        transform:translateX(-100%);
+    }
+    69%{
+        opacity: 0;
+        transform:translateX(-90%);
+    }
+    89.2%{
+        transform:translateX(0%);
+    }
+}
