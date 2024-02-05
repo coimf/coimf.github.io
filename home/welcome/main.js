@@ -31,7 +31,15 @@ scene.add(ambientLight);
 function getFixedY(element) {
   return element.getBoundingClientRect().top - document.documentElement.scrollTop;
 }
+function addStar() {
+  const geometry = new THREE.SphereGeometry(0.5,24,24);
+  const material = new THREE.MeshStandardMaterial({color: 0xffff88});
+  const star = new THREE.Mesh(geometry,material);
 
+  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(900));
+  star.position.set(x,y,z);
+  scene.add(star);
+}
 function sphereMap() {
   const s1 = document.getElementById('visit-store');
   const s2 = document.getElementById('visit-brachistochrones');
@@ -47,35 +55,26 @@ function sphereMap() {
   s1.style.transform = 'rotateX('+curve+'deg) translateZ('+Math.floor(getFixedY(s1)*c1c+45)*-5+'px)';
   s2.style.transform = 'rotateX('+curve2+'deg) translateZ('+Math.floor(getFixedY(s2)*c1c)*-2+'px)';
 }
-
+function rotateCamera(xDeg, yDeg, zDeg) {
+  const slowDown = 1-Math.random()/5;
+  camera.rotation.x -= xDeg*slowDown;
+  camera.rotation.y -= yDeg*slowDown;
+  camera.rotation.z -= zDeg*slowDown;
+}
 function moveCamera () {
   const t = document.body.getBoundingClientRect().top;
-  camera.position.z = t*.06 + 100;
-  camera.rotation.x = t/900;
-  camera.rotation.y = t/2520;
+  camera.position.z = t*.04 + 100;
+  rotateCamera(0.003,0.0033,0.0017);
 }
 document.body.onscroll = moveCamera;
-
-
-function addStar() {
-  const geometry = new THREE.SphereGeometry(0.65,24,24);
-  const material = new THREE.MeshStandardMaterial({color: 0xffffff});
-  const star = new THREE.Mesh(geometry,material);
-
-  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(900));
-  star.position.set(x,y,z);
-  scene.add(star);
-}
 
 Array(1000).fill().forEach(addStar);
 
 function rerender() {
-    requestAnimationFrame(rerender);
-    camera.rotation.x -= 0.0002;
-    camera.rotation.y -= 0.0002;
-    camera.rotation.z -= 0.00005;
-    renderer.render( scene,camera );
-    sphereMap();
+  requestAnimationFrame(rerender);
+  rotateCamera(0.00014,0.00014,0.00005);
+  renderer.render( scene,camera );
+  sphereMap();
 }
 
 rerender()
