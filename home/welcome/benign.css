@@ -1,0 +1,184 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "San Francisco";
+    margin: 0;
+    padding: 0;
+    cursor: none;
+    }
+#bg {
+    position: fixed;
+    top: 0; left: 0;
+}
+@keyframes underliner {
+    from {
+        text-decoration: none;
+        text-decoration-color: #000000;
+    }
+    to {
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+        background-color: #2e2e2e;
+    }
+}
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+h1, h2, h3, p, b {
+    font-family: var(--system-ui);
+    font-weight: 550;
+}
+b {
+    font-weight: normal;
+}
+
+.cursor {
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: fixed;
+    transition-duration: 0ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%,-50%);
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    z-index: 2;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    pointer-events: none;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+
+.navbar-el {
+    width: 100vw;
+    height: 7.5vh;
+    position: fixed;
+    background-color: #000000;
+    z-index: 1;
+    text-align: center;
+}
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 9vw);
+    place-items: center;
+    justify-content: center;
+    border: none;
+}
+.navbar-item {
+    height: 7.5vh;
+    width: 9vw;
+    background-color: #000000;
+    border: none;
+}
+
+a.navbar-item-link {
+    font-size: 1.1vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(220, 220, 220);
+}
+.navbar-item:hover {
+    text-shadow: 0px 3px 20px #ffffff;
+    animation: underliner 0.5s ease forwards;
+    cursor: none;
+}
+.logo {
+    margin: auto;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+@media only screen and (max-width: 600px) {
+    .navbar-el {
+        width: 100vw;
+        height: 7.5vh;
+        position: fixed;
+        background-color: #000000;
+        z-index: 50;
+        text-align: center;
+    }
+    .navbar {
+        width: 100vw;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(5, 20vw);
+        place-items: center;
+        justify-content: center;
+        border: none;
+    }
+    .navbar-item {
+        height: 7.5vh;
+        min-width: 20vw;
+        background-color: #000000;
+        border: none;
+    }
+    a.navbar-item-link {
+        font-size: 2.3vw;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(220, 220, 220);
+    }
+    .navbar-item:hover {
+        text-shadow: 0px 3px 20px #ffffff;
+        cursor: none;
+    }
+}
