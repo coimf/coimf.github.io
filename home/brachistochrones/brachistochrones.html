@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brachistochrones</title>
+    <script defer src="/home/indexAnim.js"></script>
+    <link rel="stylesheet" href="brachistochrones.css">
+    <script defer src="/home/cursorScript.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7193509719776699"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <nav class="navbar-el">
+        <ul class="navbar">
+            <button onclick="window.location.href='/home/welcome/index.html'" class="navbar-item">
+                <a class="navbar-item-link logo">
+                    Home
+                </a>
+            </button>
+            <button onclick="window.location.href='/home/brachistochrones/brachistochrones.html'" class="navbar-item">
+                <a class="navbar-item-link">
+                    Brachistochrone
+                </a>
+            </button>
+            <button onclick="window.location.href='/home/colleges/colleges.html'" class="navbar-item">
+              <a class="navbar-item-link">
+                  Colleges
+              </a>
+          </button>
+            <button onclick="window.location.href='/home/store/store.html'" class="navbar-item">
+                <a class="navbar-item-link">
+                    Store
+                </a>
+              </button>
+            <button onclick="window.location.href='/home/about/about.html'" class="navbar-item">
+                <a class="navbar-item-link">
+                    About Me
+                </a>
+            </button>
+        </ul>
+    </nav>
+    <div id="content-wrapper">
+    <section id="top">
+    <img src="/pictures/powder-explosion.jpeg" alt="Enter the brachistochrone" id="bg">
+    <h1 class="hidden" id="brachistochrone-title">
+        <span id="span1">Enter</span>
+        <span id="span2">the</span>
+        <span id="span3">Brachistochrone</span>
+    </h1>
+    </section>
+    <section>
+        <ul class="hidden1 article">
+            <li>
+                <h3 class="heading">The Problem</h3>
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
+                    <li>
+                        <p style="font-size: 20px; color: #bcbcbc; text-shadow: none;">Find the shape of the curve down which a bead sliding from rest and accelerated by gravity 
+                          will slip (without friction) from one point to another in the least time.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img class="hidden1" src="/pictures/theproblem.jpg" id="problem-image">
+            </li>
+        </ul>
+    </section>
+    <section>
+      <ul class="hidden3 article">
+          <li>
+              <h3 class="heading">Backstory</h3>
+              <ul style="list-style-type: none; margin: 0; padding: 0;">
+                  <li>
+                      <p style="font-size: 20px; color: #bcbcbc; margin-right: 40px; text-shadow: none;">For hundreds of years mathematicians have been pondering about the simple question above. 
+                        Galileo famously proposed using a circle's arc, it was not the fastest curve though.
+                        The most famous and credited person for answering solving this problem is Johann Bernoulli, who found the solution in 1697. He coined the word
+                        "brachistochrone" as the name of the curve he found. Once he discovered the equation for the brachistochrone, he immediately 
+                        recognized it as a differential equation for the cycloid, which can also be used to describe the brachistochrone. </p>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <img class="hidden3" id="bernoulli-face" src="/pictures/johann-bernoulli.jpeg">
+          </li>
+      </ul>
+    </section>
+    <section id="stuck-in-water">
+        <ul class="hidden3 article">
+            <li>
+                <img class="hidden2" src="/pictures/lifeguard-tower.jpeg" id="lifeguard-tower">
+            </li>
+            <li>
+                <h3 class="heading">Stuck in water</h3>
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
+                    <li>
+                        <p style="font-size: 20px; color: #bcbcbc; margin-right: 40px; text-shadow: none;">
+                            Imagine you're in the ocean and you see Bill drowning. You need to save him, but the lifeguard
+                            tower is far away; it's displaced 100 yards horizontally and 65 yards vertically. The shoreline
+                            recedes 25 yards away from the lifeguard tower. Do you run in a straight line towards the tower 
+                            or do you escape the water completely and then sprint to the tower?
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+      </section>
+      <section>
+        <ul class="hidden1 article">
+            <li>
+                <h3 class="heading">Snell's law</h3>
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
+                    <li>
+                        <p style="font-size: 20px; color: #bcbcbc; margin-right: 40px; text-shadow: none;">
+                            Think about how light behaves. It travels slower in water than in air, so by 
+                            Fermat's principle, it will take the fastest (not necessarily straight) path 
+                            and is the path you should follow to ensure Billy survives. In the picture on 
+                            the right, light bends as it enters glass. Snell's law states the sine of theta 
+                            1 divided by the speed of light in air is equal to the sine of theta 2 divided 
+                            by the speed of light in glass. Now how do we tackle the Brachistochrone problem 
+                            with this?
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img class="hidden3" src="/pictures/snells-law.gif" id="snells-law">
+            </li>
+        </ul>
+      </section>
+      <section>
+        <ul class="hidden2 article">
+            <li>
+                <h3 class="heading">Applied to brachistochrones</h3>
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
+                    <li>
+                        <p style="font-size: 20px; color: #bcbcbc; margin-right: 40px; text-shadow: none;">
+                            Bernoulli figured that when light refracts it changes direction and the more 
+                            times it refracts the more the steering of the light would resemble a curve. 
+                            Using this strategy Bernoulli managed to use Snell's law to draw out an almost 
+                            continuous curve, one that would allow the fastest movement. This newfound curve 
+                            would allow circles to roll along the fastest route. The balance between speed 
+                            and distance was found.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img class="hidden3" src="/pictures/refraction.jpeg" id="refraction">
+            </li>
+        </ul>
+      </section>
+    </div>
+    
+</body>
+</html>

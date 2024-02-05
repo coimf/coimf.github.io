@@ -1,0 +1,309 @@
+::-webkit-scrollbar {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "San Francisco";
+    cursor: none;
+}
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+.hidden {
+    scale: 1.2;
+    opacity: 0;
+    filter: contrast(0) blur(30px);
+    transform: translate(0px,44px);
+    transition: all 0.8s ease-in-out;
+}
+.shown {
+    scale: 0.8;
+    opacity: 1;
+    filter: blur(0) contrast(1.2);
+    transform: translate(0px,40px);
+}
+.hidden1 {
+    opacity: 0;
+    transform: translate(0px,400px);
+    transition: all 1s;
+}
+.shown1 {
+    text-shadow: 0px 0px 24px #ffffff;
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0px,0px);
+}
+.hidden2 {
+    opacity: 0;
+    filter: blur(7px);
+    transform: translate(310px,-300px);
+    animation-delay: 0.4s;
+    transition: all 0.6s ease-in-out;
+}
+.shown2 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0px,0px);
+}
+.hidden3 {
+    scale: 1.1;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate(50px,0);
+    transition: all 0.7s;
+}
+.shown3 {
+    scale: 1;
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0px,0px);
+    text-shadow: 0px 0px 24px #ffffff;
+}
+
+.navbar-el {
+    width: 100vw;
+    height: 7.5vh;
+    position: fixed;
+    background-color: #000000;
+    z-index: 1;
+    text-align: center;
+}
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 9vw);
+    place-items: center;
+    justify-content: center;
+    border: none;
+}
+.navbar-item {
+    height: 7.5vh;
+    width: 9vw;
+    background-color: #000000;
+    border: none;
+}
+
+a.navbar-item-link {
+    font-size: 1.1vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(220, 220, 220);
+}
+.navbar-item:hover {
+    text-shadow: 0px 3px 20px #ffffff;
+    animation: underliner 0.5s ease forwards;
+    cursor: none;
+}
+.logo {
+    margin: auto;
+    color: white;
+}
+.cursor {
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: fixed;
+    transition-duration: 0ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%,-50%);
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    z-index: 2;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    pointer-events: none;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+@keyframes underliner {
+    from {
+        text-decoration: none;
+        text-decoration-color: #000000;
+    }
+    to {
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+        background-color: #2e2e2e;
+    }
+}
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+#brachistochrone-title {
+    text-align: center; font-size: 8.85vw; text-shadow: 0px 1px 24px #ffffff;
+}
+.article {
+    list-style-type: none; display: grid; grid-template-columns: 600px 300px;
+}
+#stuck-in-water > .article {
+    list-style-type: none; display: grid; grid-template-columns: 400px 500px;
+}
+.heading {
+    font-size: 4vw; margin: 0;
+}
+#bernoulli-face {
+    width: 115%
+}
+#lifeguard-tower {
+    width: 20vw;
+}
+#problem-image {
+    width: 140%;
+}
+#refraction {
+    width: 150%;
+}
+#bg {
+    z-index: -10;
+    position: absolute;
+    top: -20%; left: 0;
+    width: 100%;
+    animation: show-background 4.15s forwards ease;
+}
+#span1, #span2, #span3 {
+    text-shadow: none;
+    opacity: 0;
+    animation: flicker 0.9s forwards linear;
+}
+#span2 {
+    animation-delay: 1.2s;
+}
+#span3 {
+    animation-delay: 2.1s;
+}
+@keyframes show-background {
+    from{display: none; opacity: 0;}
+    90%{display: none; transform: translateY(40px);}
+    to{display: block; transform: translateY(0);}
+}
+@keyframes flicker {
+    from{opacity: 0; text-shadow: none !important;}
+    25%{opacity: 0;}
+    25.0000001%{opacity: 1;}
+    25.0000002%{opacity: 0;}
+    36%{opacity: 0;}
+    36.0000001%{opacity: 1;}
+    36.0000002%{opacity: 0;}
+    55%{opacity: 0;}
+    55.0000001%{opacity: 1;}
+    55.0000002%{opacity: 0;}
+    68%{opacity: 0.5;}
+    75%{opacity: 0.5;}
+    75.0000001%{opacity: 1;}
+    76%{opacity: 0;}
+    99%{ color: white; text-shadow: none !important;}
+    to{opacity: 1; color: black;}
+}
+@media only screen and (max-width: 600px) {
+    #problem-image,
+    #lifeguard-tower,
+    #bernoulli-face {
+        width: 80vw;
+    }
+    .heading {
+        font-size: 8vw;
+    }
+    .article{
+        display: flex;
+        flex-direction: column;
+    }
+    #brachistochrone-title {
+        font-size: 12vw;
+    }
+    .navbar-el {
+        width: 100vw;
+        height: 7.5vh;
+        position: fixed;
+        background-color: #000000;
+        z-index: 50;
+        text-align: center;
+    }
+    .navbar {
+        width: 100vw;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(5, 20vw);
+        place-items: center;
+        justify-content: center;
+        border: none;
+    }
+    .navbar-item {
+        height: 7.5vh;
+        min-width: 20vw;
+        background-color: #000000;
+        border: none;
+    }
+    a.navbar-item-link {
+        font-size: 2.3vw;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(220, 220, 220);
+    }
+    .navbar-item:hover {
+        text-shadow: 0px 3px 20px #ffffff;
+        cursor: none;
+    }
+}
